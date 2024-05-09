@@ -31,6 +31,23 @@
 /* Template default CSS
 /*----------------------------------------*/
 
+.nav {
+  display: flex;
+  gap: 0px; /* 이미지들 간의 간격을 줄임 */
+  padding: 5px;
+}
+
+.nav a {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.nav a img {
+  max-width: 100%;
+  height: auto;
+}
+
 html,
 body {
   height: 100%;
