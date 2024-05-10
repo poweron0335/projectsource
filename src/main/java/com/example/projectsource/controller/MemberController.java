@@ -1,20 +1,23 @@
 package com.example.projectsource.controller;
 
 import org.springframework.stereotype.Controller;
+
+import lombok.extern.log4j.Log4j2;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import lombok.extern.log4j.Log4j2;
-
+@RequestMapping("member")
 @Log4j2
 @Controller
-public class ProjectController {
-    @GetMapping("/")
-    public String home() {
-        log.info("메인화면 요청");
-
-        return "index";
+public class MemberController {
+    @GetMapping("/login")
+    public String login() {
+        return "member/login";
     }
 
+    @GetMapping("/signup")
+    public String signup() {
+        return "member/signup";
+    }
 }
